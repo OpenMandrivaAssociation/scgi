@@ -15,6 +15,7 @@ BuildRequires:	apache-devel >= 2.2.0
 BuildRequires:	file
 BuildRequires:	pcre-devel
 BuildRequires:	python-devel
+BuildRoot:	%{_tmppath}/%{name}-%{version}-%{release}-buildroot
 
 %description
 SCGI: Simple Common Gateway Interface.
