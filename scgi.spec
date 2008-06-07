@@ -5,7 +5,7 @@
 Summary:	Simple Common Gateway Interface
 Name:		scgi
 Version:	1.12
-Release:	%mkrel 1
+Release:	%mkrel 2
 Group:		System/Servers
 License:	BSD-style
 URL:		http://python.ca/scgi/
