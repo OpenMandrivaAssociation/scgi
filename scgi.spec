@@ -4,8 +4,8 @@
 
 Summary:	Simple Common Gateway Interface
 Name:		scgi
-Version:	1.12
-Release:	%mkrel 3
+Version:	1.13
+Release:	%mkrel 1
 Group:		System/Servers
 License:	BSD-style
 URL:		http://python.ca/scgi/
@@ -81,7 +81,7 @@ find . -type f|xargs file|grep 'text'|cut -d: -f1|xargs perl -p -i -e 's/\r//'
 python setup.py build
 
 %install
-[ "%{buildroot}" != "/" ] && rm -rf %{buildroot}
+rm -rf %{buildroot}
 
 install -d %{buildroot}%{_sysconfdir}/httpd/modules.d
 install -d %{buildroot}%{_libdir}/apache-extramodules
@@ -106,7 +106,7 @@ if [ "$1" = "0" ]; then
 fi
 
 %clean
-[ "%{buildroot}" != "/" ] && rm -rf %{buildroot}
+rm -rf %{buildroot}
 
 %files -n python-scgi -f INSTALLED_FILES
 %defattr(-,root,root)
