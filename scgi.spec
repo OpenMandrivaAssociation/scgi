@@ -5,12 +5,13 @@
 Summary:	Simple Common Gateway Interface
 Name:		scgi
 Version:	1.13
-Release:	%mkrel 1
+Release:	%mkrel 2
 Group:		System/Servers
 License:	BSD-style
 URL:		http://python.ca/scgi/
-Source0:	http://quixote.python.ca/releases/scgi-%{version}.tar.gz
+Source0:	http://python.ca/scgi/releases/scgi-%{version}.tar.gz
 Source1:	B14_mod_scgi.conf
+Patch0:		scgi-1.13-format_not_a_string_literal_and_no_format_arguments.diff
 BuildRequires:	apache-devel >= 2.2.0
 BuildRequires:	file
 BuildRequires:	pcre-devel
@@ -57,6 +58,7 @@ This package contains the apache module.
 %prep
 
 %setup -q -n scgi-%{version}
+%patch0 -p0
 
 cp %{SOURCE1} B14_mod_scgi.conf
 
