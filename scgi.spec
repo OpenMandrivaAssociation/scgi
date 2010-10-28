@@ -4,8 +4,8 @@
 
 Summary:	Simple Common Gateway Interface
 Name:		scgi
-Version:	1.13
-Release:	%mkrel 7
+Version:	1.14
+Release:	%mkrel 1
 Group:		System/Servers
 License:	BSD-style
 URL:		http://python.ca/scgi/
@@ -91,7 +91,7 @@ install -d %{buildroot}%{_libdir}/apache-extramodules
 install -m0755 apache2/.libs/mod_scgi.so %{buildroot}%{_libdir}/apache-extramodules/
 install -m0644 B14_mod_scgi.conf %{buildroot}%{_sysconfdir}/httpd/modules.d/
 
-python setup.py install --prefix=%{_prefix} --root=%{buildroot} --record=INSTALLED_FILES
+PYTHONDONTWRITEBYTECODE= python setup.py install --prefix=%{_prefix} --root=%{buildroot} --record=INSTALLED_FILES
 
 cp apache2/README.txt README.apache2.txt
 
