@@ -1,0 +1,11 @@
+--- apache2/mod_scgi.c	2009-01-07 16:43:53.000000000 +0100
++++ apache2/mod_scgi.c.oden	2009-01-07 16:44:36.000000000 +0100
+@@ -144,7 +144,7 @@ static void log_err(const char *file, in
+ static void log_debug(const char *file, int line, request_rec *r, const
+                       char *msg)
+ {
+-    ap_log_rerror(file, line, APLOG_DEBUG, APR_SUCCESS, r, msg);
++    ap_log_rerror(file, line, APLOG_DEBUG, APR_SUCCESS, r, "%s", msg);
+ }
+ 
+ static char *http2env(apr_pool_t *p, const char *name)
