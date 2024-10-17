@@ -8,7 +8,7 @@ Version:	1.14
 Release:	%mkrel 1
 Group:		System/Servers
 License:	BSD-style
-URL:		http://python.ca/scgi/
+URL:		https://python.ca/scgi/
 Source0:	http://python.ca/scgi/releases/scgi-%{version}.tar.gz
 Source1:	B14_mod_scgi.conf
 Patch0:		scgi-1.13-format_not_a_string_literal_and_no_format_arguments.diff
